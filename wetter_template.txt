@@ -1,0 +1,9 @@
+<!-- wetter_template.html -->
+<html>
+  <head><meta charset="UTF-8"><title>Wetterbericht</title></head>
+  <body>
+    <h1>Wetter in [STADT]</h1>
+    <p><strong>Lage:</strong> [WETTER]</p>
+    <p><strong>Temperatur:</strong> [TEMP] °C</p>
+  </body>
+</html>
