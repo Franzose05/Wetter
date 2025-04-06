@@ -1,0 +1,28 @@
+{
+    "id": "3E3E9127",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1743953382187.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "id": "3ca00ca48f584d12aa3fa0243cc48ef3",
+        "name": "weather",
+        "title": "weather",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 7954887939642191969,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1743953382187,
+    "read_only": false,
+    "read_only_alternatives": []
+}

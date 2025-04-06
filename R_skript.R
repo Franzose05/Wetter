@@ -28,7 +28,7 @@ wetterlage <- data$weather$description[1]
 temperatur <- round(data$main$temp, 1)
 
 # HTML-Template lesen
-template <- readLines("wetter_template.html.txt", encoding = "UTF-8")
+template <- readLines("wetter_template.txt", encoding = "UTF-8")
 
 # Platzhalter ersetzen
 output <- gsub("\\[STADT\\]", city, template)
