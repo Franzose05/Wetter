@@ -1,9 +1,44 @@
-<!-- wetter_template.html -->
-<html>
-  <head><meta charset="UTF-8"><title>Wetterbericht</title></head>
-  <body>
-    <h1>Wetter in Stuttgart</h1>
-    <p><strong>Lage:</strong> Klarer Himmel</p>
-    <p><strong>Temperatur:</strong> 11.3 °C</p>
-  </body>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Wetterbericht</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to top right, #87CEEB, #f0f8ff);
+      color: #333;
+      padding: 2rem;
+      max-width: 500px;
+      margin: 2rem auto;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #1e90ff;
+    }
+    .wetter-box {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .icon {
+      font-size: 50px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    .temp {
+      font-size: 2em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="wetter-box">
+    <h1>Wetter in [STADT]</h1>
+    <p><span class="icon">🌤️</span> <strong>Lage:</strong> [WETTER]</p>
+    <p><strong>Temperatur:</strong> <span class="temp">[TEMP] °C</span></p>
+  </div>
+</body>
 </html>
