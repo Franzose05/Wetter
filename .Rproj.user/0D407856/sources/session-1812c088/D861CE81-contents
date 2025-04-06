@@ -41,5 +41,5 @@ output <- gsub("\\[WETTER\\]", wetterlage, output)
 output <- gsub("\\[TEMP\\]", round(temperatur, 1), output)
 
 # In neue HTML-Datei schreiben
-writeLines(output, "wetter_fertig.html", useBytes = TRUE)
+writeLines(output, "index.html", useBytes = TRUE)
 
