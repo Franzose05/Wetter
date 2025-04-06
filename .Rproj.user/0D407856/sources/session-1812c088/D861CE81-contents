@@ -6,40 +6,34 @@ library(httr)
 library(jsonlite)
 
 
-# save API Key
+## Stadt und API-Key
 city <- "Stuttgart"
 api_key <- "37902b8224263aa490b5dee0c2574ea1"
 
-# API URL
-url <- paste0("https://api.openweathermap.org/data/2.5/weather?q=", 
-              city,
-              "&appid=",
-              api_key,
-              "&units=metric&lang=de")
+# URL bauen
+url <- paste0(
+  "https://api.openweathermap.org/data/2.5/weather?q=",
+  URLencode(city),
+  "&appid=", api_key,
+  "&units=metric&lang=de"
+)
 
 # Anfrage senden
 res <- GET(url)
-
-# data
 json_text <- content(res, as = "text", encoding = "UTF-8")
 data <- fromJSON(json_text)
 
-
-# Wetterlage & Temperatur extrahieren
-
+# Wetterdaten extrahieren
 wetterlage <- data$weather$description[1]
-temperatur <- data$main$temp
-  
+temperatur <- round(data$main$temp, 1)
 
 # HTML-Template lesen
 template <- readLines("wetter_template.txt", encoding = "UTF-8")
 
 # Platzhalter ersetzen
-output <- template
-output <- gsub("\\[STADT\\]", city, output)
+output <- gsub("\\[STADT\\]", city, template)
 output <- gsub("\\[WETTER\\]", wetterlage, output)
-output <- gsub("\\[TEMP\\]", round(temperatur, 1), output)
+output <- gsub("\\[TEMP\\]", temperatur, output)
 
-# In neue HTML-Datei schreiben
+# Fertige Datei schreiben
 writeLines(output, "index.html", useBytes = TRUE)
-
